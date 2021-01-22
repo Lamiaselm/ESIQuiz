@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="501.0" prefWidth="734.0" stylesheets="@apprenant.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.apprenant_ctr">
+   <children>
+      <Button fx:id="dcx" layoutX="473.0" layoutY="282.0" mnemonicParsing="false" onAction="#deconexion" prefHeight="59.0" prefWidth="141.0" text="Deconexion " />
+      <Button fx:id="csltqz" layoutX="76.0" layoutY="277.0" mnemonicParsing="false" onAction="#ConsulterQuiz" prefHeight="59.0" prefWidth="166.0" text="Consulter Quiz &amp; profil" />
+   </children>
+</AnchorPane>

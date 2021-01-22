@@ -1,0 +1,8 @@
+.root {
+    -fx-background-image: url('images/menuformateur.jpg');
+    -fx-background-size: cover ;
+}
+.root2 {
+    -fx-background-image: url('images/apprenant.jpg');
+    -fx-background-size: cover ;
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CreerFormationCont">
+    <children>
+        <VBox prefHeight="383.0" prefWidth="580.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <HBox prefHeight="42.0" prefWidth="580.0" spacing="15.0">
+                    <children>
+                        <Label prefHeight="23.0" prefWidth="108.0" text="Nom du formation" />
+                        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="nom" prefHeight="25.0" prefWidth="200.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="7.0" prefWidth="580.0" spacing="15.0">
+                    <children>
+                        <Label prefHeight="23.0" prefWidth="108.0" text="Description" />
+                        <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <TextArea fx:id="descp" prefHeight="200.0" prefWidth="200.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="45.0" spacing="15.0">
+                    <children>
+                        <Label prefHeight="23.0" prefWidth="108.0" text="Date Debut" />
+                        <Region prefHeight="3.0" prefWidth="243.0" HBox.hgrow="ALWAYS" />
+                        <DatePicker fx:id="dateDebut" prefHeight="25.0" prefWidth="199.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="92.0" spacing="15.0">
+                    <children>
+                        <Label prefHeight="23.0" prefWidth="108.0" text="Date Fin" />
+                        <Region prefHeight="0.0" prefWidth="243.0" HBox.hgrow="ALWAYS" />
+                        <DatePicker fx:id="dateFin" prefHeight="25.0" prefWidth="199.0" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="181.0" prefWidth="580.0">
+                    <children>
+                        <TableView fx:id="tabNotions" prefHeight="179.0" prefWidth="501.0">
+                            <columns>
+                                <TableColumn fx:id="nomNotion" prefWidth="525.0" text="Nom Notion" />
+                            </columns>
+                        </TableView>
+                        <VBox prefHeight="50.0" prefWidth="81.0" spacing="15.0">
+                            <children>
+                                <Region prefHeight="200.0" prefWidth="200.0" />
+                                <Button fx:id="ajouter" mnemonicParsing="false" onAction="#ajouterNotion" prefHeight="25.0" prefWidth="71.0" text="Ajouter" />
+                                <Button fx:id="supprimer" mnemonicParsing="false" onAction="#supprimerNotion" text="Supprimer" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="181.0" prefWidth="580.0">
+                    <children>
+                        <TableView fx:id="tabQuiz" prefHeight="179.0" prefWidth="501.0">
+                            <columns>
+                                <TableColumn fx:id="nomQuiz" prefWidth="146.0" text="Nom Quiz" />
+                                <TableColumn fx:id="dateDbQuiz" prefWidth="118.0" text="Date Debut" />
+                                <TableColumn fx:id="dateFnQuiz" prefWidth="235.0" text="Date Fin" />
+                            </columns>
+                        </TableView>
+                        <VBox prefHeight="50.0" prefWidth="81.0" spacing="15.0">
+                            <children>
+                                <Region prefHeight="200.0" prefWidth="200.0" />
+                                <Button fx:id="ajouterQuiz" mnemonicParsing="false" onAction="#addQuiz" prefHeight="25.0" prefWidth="71.0" text="Ajouter" />
+                                <Button fx:id="suprimerQuiz" mnemonicParsing="false" onAction="#supprimerNotion" text="Supprimer" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox fx:id="tabApprenants" layoutX="10.0" layoutY="265.0" prefHeight="181.0" prefWidth="580.0">
+                    <children>
+                        <TableView fx:id="tabApprenant" prefHeight="179.0" prefWidth="501.0">
+                            <columns>
+                                <TableColumn fx:id="colMatricule" prefWidth="54.0" text="Matricule" />
+                                <TableColumn fx:id="colNom" prefWidth="54.0" text="Nom" />
+                                <TableColumn fx:id="colPrenom" prefWidth="127.0" text="Prenom" />
+                                <TableColumn fx:id="colDateN" prefWidth="130.0" text="Date Naissance" />
+                                <TableColumn fx:id="colMoy" prefWidth="102.0" text="Moyenne" />
+                            </columns>
+                        </TableView>
+                        <VBox prefHeight="50.0" prefWidth="81.0" spacing="15.0">
+                            <children>
+                                <Region prefHeight="200.0" prefWidth="200.0" />
+                                <Button fx:id="ajouterAppr" mnemonicParsing="false" onAction="#addApprenant" prefHeight="25.0" prefWidth="71.0" text="Ajouter" />
+                                <Button fx:id="suprimerAppr" mnemonicParsing="false" onAction="#deleApprenat" text="Supprimer" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="29.0" prefWidth="580.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="ok" mnemonicParsing="false" onAction="#getData" text="Ok" />
+
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
